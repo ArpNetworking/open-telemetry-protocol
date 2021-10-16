@@ -49,13 +49,6 @@
       </roles>
     </developer>
     <developer>
-      <id>bngreen</id>
-      <email>bruno.green@gmail.com</email>
-      <roles>
-        <role>developer</role>
-      </roles>
-    </developer>
-    <developer>
       <id>villekoskela</id>
       <email>ville.koskela@inscopemetrics.com</email>
       <organization>Inscope Metrics</organization>
@@ -104,6 +97,19 @@
       </plugin>
 
       <!-- Project Specific Plugins -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+<!--        <version>${maven.compiler.plugin.version}</version>-->
+        <configuration>
+          <showDeprecation>true</showDeprecation>
+          <showWarnings>true</showWarnings>
+          <compilerArgs>
+            <arg>-Xlint:all</arg>
+            <arg>-Xlint:-processing</arg>
+          </compilerArgs>
+        </configuration>
+      </plugin>
       <plugin>
         <groupId>com.github.os72</groupId>
         <artifactId>protoc-jar-maven-plugin</artifactId>
