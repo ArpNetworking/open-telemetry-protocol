@@ -32,7 +32,7 @@ pipeline {
       when { buildingTag(); not { changeRequest() }  }
       steps {
         script {
-          target = "deploy -P release -P rpm --settings settings.xml"
+          target = "deploy -P release --settings settings.xml"
         }
         sh 'gpg --batch --import arpnetworking.key'
       }
