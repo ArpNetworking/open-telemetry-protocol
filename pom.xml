@@ -68,12 +68,14 @@
 
   <properties>
     <!--Dependency versions-->
-    <protobuf.version>3.10.0</protobuf.version>
-    <protoc.version>3.8.0</protoc.version>
+    <protobuf.version>3.11.4</protobuf.version>
+    <protoc.version>3.11.4</protoc.version>
+    <grpc.stub.version>1.41.0</grpc.stub.version>
+    <akka.grpc.version>2.1.0</akka.grpc.version>
 
     <!--Plugin versions-->
     <build.helper.maven.plugin.version>3.0.0</build.helper.maven.plugin.version>
-    <protoc.jar.maven.plugin.version>3.8.0</protoc.jar.maven.plugin.version>
+    <protoc.jar.maven.plugin.version>3.11.4</protoc.jar.maven.plugin.version>
   </properties>
   <build>
     <plugins>
@@ -122,6 +124,14 @@
             </goals>
             <configuration>
               <protocArtifact>com.google.protobuf:protoc:${protoc.version}</protocArtifact>
+              <outputTargets>
+                <outputTarget>
+                  <type>grpc-java</type>
+                  <addSources>main</addSources>
+                  <outputDirectory>${project.build.directory}/generated-sources/grpc-stubs</outputDirectory>
+                  <pluginArtifact>io.grpc:protoc-gen-grpc-java:${grpc.stub.version}</pluginArtifact>
+                </outputTarget>
+              </outputTargets>
               <includeDirectories>
                 <include>src/main/proto</include>
               </includeDirectories>
@@ -144,9 +154,22 @@
             </goals>
             <configuration>
               <sources>
-                <source>target/generated-sources</source>
+                <source>target/generated-sources/akka-grpc-java</source>
               </sources>
             </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>com.lightbend.akka.grpc</groupId>
+        <artifactId>akka-grpc-maven-plugin</artifactId>
+        <version>${akka.grpc.version}</version>
+        <executions>
+          <execution>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>generate</goal>
+            </goals>
           </execution>
         </executions>
       </plugin>
@@ -157,6 +180,21 @@
       <groupId>com.google.protobuf</groupId>
       <artifactId>protobuf-java</artifactId>
       <version>${protobuf.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>io.grpc</groupId>
+      <artifactId>grpc-stub</artifactId>
+      <version>${grpc.stub.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>io.grpc</groupId>
+      <artifactId>grpc-protobuf</artifactId>
+      <version>${grpc.stub.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.lightbend.akka.grpc</groupId>
+      <artifactId>akka-grpc-runtime_2.12</artifactId>
+      <version>${akka.grpc.version}</version>
     </dependency>
   </dependencies>
 </project>
