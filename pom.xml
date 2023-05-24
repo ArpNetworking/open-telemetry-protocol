@@ -69,7 +69,7 @@
   <properties>
     <!--Dependency versions-->
     <akka.grpc.version>2.1.5</akka.grpc.version>
-    <akka.version>2.6.19</akka.version>
+    <akka.version>2.8.2</akka.version>
     <grpc.stub.version>1.48.1</grpc.stub.version>
     <guava.version>31.1-jre</guava.version>
     <jax.annotations.version>1.3.2</jax.annotations.version>
