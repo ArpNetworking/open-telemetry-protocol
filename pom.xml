@@ -68,13 +68,15 @@
 
   <properties>
     <!--Dependency versions-->
-    <akka.grpc.version>2.1.5</akka.grpc.version>
-    <akka.version>2.6.19</akka.version>
+    <akka.grpc.version>2.1.6</akka.grpc.version>
+    <akka.http.core.version>10.2.10</akka.http.core.version>
+    <akka.version>2.6.20</akka.version>
     <grpc.stub.version>1.48.1</grpc.stub.version>
     <guava.version>31.1-jre</guava.version>
     <jax.annotations.version>1.3.2</jax.annotations.version>
     <protobuf.version>3.21.7</protobuf.version>
     <protoc.version>3.21.5</protoc.version>
+    <scala.lib.version>2.13.9</scala.lib.version>
     <scala.version>2.13</scala.version>
 
     <!--Plugin versions-->
@@ -205,7 +207,7 @@
     <dependency>
       <groupId>com.typesafe.akka</groupId>
       <artifactId>akka-http-core_${scala.version}</artifactId>
-      <version>10.2.9</version>
+      <version>${akka.http.core.version}</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -244,7 +246,7 @@
     <dependency>
       <groupId>org.scala-lang</groupId>
       <artifactId>scala-library</artifactId>
-      <version>2.13.9</version>
+      <version>${scala.lib.version}</version>
       <scope>provided</scope>
     </dependency>
   </dependencies>
