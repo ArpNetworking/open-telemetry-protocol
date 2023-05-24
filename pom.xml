@@ -69,7 +69,7 @@
   <properties>
     <!--Dependency versions-->
     <akka.grpc.version>2.1.6</akka.grpc.version>
-    <akka.http.core.version>10.2.10</akka.http.core.version>
+    <akka.http.core.version>10.5.2</akka.http.core.version>
     <akka.version>2.6.20</akka.version>
     <grpc.stub.version>1.48.1</grpc.stub.version>
     <guava.version>31.1-jre</guava.version>
