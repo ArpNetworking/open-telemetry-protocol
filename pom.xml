@@ -29,7 +29,7 @@
   <name>Open Telemetry Protocol</name>
   <description>Open Telemetry protocol for building storage integrations</description>
   <url>https://github.com/ArpNetworking/open-telemetry-protocol</url>
-  <version>1.0.4-SNAPSHOT</version>
+  <version>1.1.1-SNAPSHOT</version>
 
   <licenses>
     <license>
@@ -106,7 +106,6 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-<!--        <version>${maven.compiler.plugin.version}</version>-->
         <configuration>
           <showDeprecation>true</showDeprecation>
           <showWarnings>true</showWarnings>
