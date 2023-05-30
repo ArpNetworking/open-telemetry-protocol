@@ -76,7 +76,7 @@
     <jax.annotations.version>1.3.2</jax.annotations.version>
     <protobuf.version>3.23.2</protobuf.version>
     <protoc.version>3.21.5</protoc.version>
-    <scala.lib.version>2.13.9</scala.lib.version>
+    <scala.lib.version>2.13.10</scala.lib.version>
     <scala.version>2.13</scala.version>
 
     <!--Plugin versions-->
