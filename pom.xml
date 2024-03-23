@@ -75,7 +75,7 @@
     <pekko.http.version>1.0.1</pekko.http.version>
     <pekko.version>1.0.2</pekko.version>
     <protobuf.version>4.26.0</protobuf.version>
-    <protoc.version>3.25.2</protoc.version>
+    <protoc.version>4.26.0</protoc.version>
     <scala.lib.version>2.13.13</scala.lib.version>
     <scala.version>2.13</scala.version>
 
