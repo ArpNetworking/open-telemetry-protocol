@@ -68,7 +68,7 @@
 
   <properties>
     <!--Dependency versions-->
-    <grpc.stub.version>1.64.0</grpc.stub.version>
+    <grpc.stub.version>1.65.0</grpc.stub.version>
     <guava.version>33.2.1-jre</guava.version>
     <jax.annotations.version>1.3.2</jax.annotations.version>
     <pekko.grpc.version>1.0.2</pekko.grpc.version>
