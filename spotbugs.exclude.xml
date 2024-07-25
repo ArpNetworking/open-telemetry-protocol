@@ -60,6 +60,7 @@
      <Match>
          <Or>
             <Source name="~.*generated.*" />
+            <Class name="~.*io\.opentelemetry\.proto\..*" />
          </Or>
      </Match>
 </FindBugsFilter>
