@@ -83,7 +83,7 @@
     <spotbugs.exclude>${project.basedir}/spotbugs.exclude.xml</spotbugs.exclude>
 
     <!--Plugin versions-->
-    <build.helper.maven.plugin.version>3.6.0</build.helper.maven.plugin.version>
+    <build.helper.maven.plugin.version>3.6.1</build.helper.maven.plugin.version>
     <protoc.jar.maven.plugin.version>3.11.4</protoc.jar.maven.plugin.version>
   </properties>
   <build>
